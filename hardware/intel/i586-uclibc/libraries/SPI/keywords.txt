@@ -1,0 +1,49 @@
+#######################################
+# Syntax Coloring Map SPI
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SPI	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin	KEYWORD2
+end	KEYWORD2
+transfer	KEYWORD2
+setBitOrder	KEYWORD2
+setDataMode	KEYWORD2
+setClockDivider	KEYWORD2
+setClockSpeed	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+SPI_CLOCK_DIV1	LITERAL1
+SPI_CLOCK_DIV4	LITERAL1
+SPI_CLOCK_DIV16	LITERAL1
+SPI_CLOCK_DIV64	LITERAL1
+SPI_CLOCK_DIV128	LITERAL1
+SPI_CLOCK_DIV2	LITERAL1
+SPI_CLOCK_DIV8	LITERAL1
+SPI_CLOCK_DIV32	LITERAL1
+SPI_CLOCK_DIV64	LITERAL1
+SPI_MODE0	LITERAL1
+SPI_MODE1	LITERAL1
+SPI_MODE2	LITERAL1
+SPI_MODE3	LITERAL1
+SPI_CLOCK_100K	LITERAL1
+SPI_CLOCK_125K	LITERAL1
+SPI_CLOCK_250K	LITERAL1
+SPI_CLOCK_500K	LITERAL1
+SPI_CLOCK_1M	LITERAL1
+SPI_CLOCK_2M	LITERAL1
+SPI_CLOCK_4M	LITERAL1
+SPI_CLOCK_8M	LITERAL1
+SPI_CLOCK_10M	LITERAL1
+SPI_CLOCK_12M	LITERAL1
+SPI_CLOCK_13M	LITERAL1

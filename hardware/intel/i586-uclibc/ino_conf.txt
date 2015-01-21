@@ -1,0 +1,29 @@
+
+# Warning: the code that reads this file is VERY primitive
+# Should probably switch to .ini some day
+
+CORES_DIR=cores/arduino
+VAR_DIR=variants
+BOARD_DIR=/.
+VER_DIR=/.
+
+# WARNING: this MUST be a relative path! Limitation of the ino tool
+# TOOL_DIR=tools/x86/i586-pokysdk-linux/usr/bin/i586-poky-linux-uclibc/
+TOOL_DIR=tools/x86/x86_64-pokysdk-linux/usr/bin/i586-poky-linux-uclibc/
+
+# These settings below are dangerously duplicating:
+#   /p/clanton/kbfabd/xchains/1.4.1/environment-setup-i586-poky-linux-uclibc
+# We should eventually source everything from the environment-setup file
+
+CC=i586-poky-linux-uclibc-gcc
+CXX=i586-poky-linux-uclibc-g++
+AR=i586-poky-linux-uclibc-ar
+OBJCOPY=i586-poky-linux-uclibc-objcopy
+LINKER=i586-poky-linux-uclibc-g++
+
+
+
+CC_FLAGS=-m32 -march=i586 --sysroot=/p/clanton/kbfabd/xchains/1.4.1/sysroots/i586-poky-linux-uclibc -c -g -Os -Wall -ffunction-sections -fdata-sections  -D__ARDUINO_X86__ -DARDUINO=153
+CXX_FLAGS=-fno-exceptions
+ELF_FLAGS=-Os -Wl,--gc-sections -march=i586 --sysroot=/p/clanton/kbfabd/xchains/1.4.1/sysroots/i586-poky-linux-uclibc -m32
+CROSS_COMP_PATH=/p/clanton/kbfabd/xchains/1.4.1/sysroots
