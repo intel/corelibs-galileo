@@ -59,14 +59,14 @@ recipe.size.regex=Total\s+([0-9]+).*
 # -------------------
 tools.izmirdl.cmd.path={runtime.ide.path}/hardware/intel/i586-uclibc/tools/izmir/clupload_osx.sh
 tools.izmirdl.cmd.path.linux="{runtime.ide.path}/hardware/intel/i586-uclibc/tools/izmir/clupload_linux.sh"
-tools.izmirdl.cmd.path.windows={runtime.ide.path}/hardware/tools/x86/bin/bash.exe
-tools.izmirdl.cmd.script.windows={runtime.ide.path}/hardware/intel/i586-uclibc/tools/izmir/clupload_win.sh
-tools.izmirdl.cmd.bin.windows={runtime.ide.path}\hardware\tools\x86\bin
+tools.izmirdl.cmd.path.windows={runtime.tools.sketchUploader-1.0.0.path}/x86/bin/bash.exe
+tools.izmirdl.cmd.script.windows={runtime.tools.sketchUploader-1.0.0.path}/clupload/cluploadGalileo_win.sh
+tools.izmirdl.cmd.bin.windows={runtime.tools.sketchUploader-1.0.0.path}/x86/bin
 
 tools.izmirdl.upload.params.verbose=-vvvvvv
 tools.izmirdl.upload.params.quiet=-q
 
-tools.izmirdl.upload.pattern=/bin/bash --verbose --noprofile "{cmd.path}" "{runtime.ide.path}/hardware/tools/x86/bin" {build.path}/{build.project_name}.elf {serial.port}
-tools.izmirdl.upload.pattern.linux=/bin/bash --verbose  --noprofile {cmd.path} "{runtime.ide.path}/hardware/tools" {build.path}/{build.project_name}.elf {serial.port}
+tools.izmirdl.upload.pattern=/bin/bash --verbose --noprofile "{cmd.path}" "{runtime.tools.sketchUploader-1.0.0.path}/x86/bin" {build.path}/{build.project_name}.elf {serial.port}
+tools.izmirdl.upload.pattern.linux=/bin/bash --verbose  --noprofile {cmd.path} "{runtime.tools.sketchUploader-1.0.0.path}/x86/bin" {build.path}/{build.project_name}.elf {serial.port}
 tools.izmirdl.upload.elf.windows={build.path}/{build.project_name}.elf
 tools.izmirdl.upload.pattern.windows="{cmd.path}" "--verbose" "--noprofile" "{cmd.script}" "{cmd.bin}" "{upload.elf}" "{serial.port}"
