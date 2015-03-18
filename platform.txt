@@ -57,8 +57,8 @@ recipe.size.regex=Total\s+([0-9]+).*
 
 # X86 Uploader/Programmers tools
 # -------------------
-tools.izmirdl.cmd.path={runtime.ide.path}/hardware/intel/i586-uclibc/tools/izmir/clupload_osx.sh
-tools.izmirdl.cmd.path.linux="{runtime.ide.path}/hardware/intel/i586-uclibc/tools/izmir/clupload_linux.sh"
+tools.izmirdl.cmd.path={runtime.tools.sketchUploader-1.0.0.path}/clupload/cluploadGalileo_osx.sh
+tools.izmirdl.cmd.path.linux="{runtime.tools.sketchUploader-1.0.0.path}/clupload/cluploadGalileo_linux.sh"
 tools.izmirdl.cmd.path.windows={runtime.tools.sketchUploader-1.0.0.path}/x86/bin/bash.exe
 tools.izmirdl.cmd.script.windows={runtime.tools.sketchUploader-1.0.0.path}/clupload/cluploadGalileo_win.sh
 tools.izmirdl.cmd.bin.windows={runtime.tools.sketchUploader-1.0.0.path}/x86/bin
