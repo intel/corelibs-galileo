@@ -7,10 +7,10 @@ name=Arduino i586 Boards
 compiler.pre_install.cmd.linux=tools/i586/install_script.sh
 compiler.path={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/i586/pokysdk/usr/bin/i586-poky-linux-uclibc/
 compiler.path.windows={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/pokysdk/usr/bin/i586-poky-linux-uclibc/
-compiler.path.linux={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/sysroots/pokysdk/usr/bin/i586-poky-linux-uclibc/
+compiler.path.linux={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/i586/sysroots/pokysdk/usr/bin/i586-poky-linux-uclibc/
 compiler.sysroot={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/i586/i586-poky-linux-uclibc
 compiler.sysroot.windows={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/i586-poky-linux-uclibc
-compiler.sysroot.linux={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}sysroots/i586-poky-linux-uclibc
+compiler.sysroot.linux={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/i586/sysroots/i586-poky-linux-uclibc
 compiler.prefix=i586-poky-linux-uclibc
 compiler.c.cmd={compiler.prefix}-gcc
 compiler.c.flags= -m32 -march=i586 "--sysroot={compiler.sysroot}" -c -g -Os -w -ffunction-sections -fdata-sections -MMD -D__ARDUINO_X86__ -Xassembler -mquark-strip-lock=yes
