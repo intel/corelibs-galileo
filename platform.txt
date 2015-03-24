@@ -4,13 +4,12 @@
 
 name=Arduino i586 Boards
 # compiler.path TBD
-compiler.pre_install.cmd.linux=tools/i586/install_script.sh
-compiler.path={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/i586/pokysdk/usr/bin/i586-poky-linux-uclibc/
-compiler.path.windows={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/pokysdk/usr/bin/i586-poky-linux-uclibc/
-compiler.path.linux={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/i586/sysroots/pokysdk/usr/bin/i586-poky-linux-uclibc/
-compiler.sysroot={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/i586/i586-poky-linux-uclibc
-compiler.sysroot.windows={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/i586-poky-linux-uclibc
-compiler.sysroot.linux={runtime.tools.i586-poky-linux-uclibc-1.0.4.path}/i586/sysroots/i586-poky-linux-uclibc
+compiler.path={runtime.tools.i586-poky-linux-uclibc-1.6.2+1.0.path}/i586/pokysdk/usr/bin/i586-poky-linux-uclibc/
+compiler.path.windows={runtime.tools.i586-poky-linux-uclibc-1.6.2+1.0.path}/pokysdk/usr/bin/i586-poky-linux-uclibc/
+compiler.path.linux={runtime.tools.i586-poky-linux-uclibc-1.6.2+1.0.path}/i586/sysroots/pokysdk/usr/bin/i586-poky-linux-uclibc/
+compiler.sysroot={runtime.tools.i586-poky-linux-uclibc-1.6.2+1.0.path}/i586/i586-poky-linux-uclibc
+compiler.sysroot.windows={runtime.tools.i586-poky-linux-uclibc-1.6.2+1.0.path}/i586-poky-linux-uclibc
+compiler.sysroot.linux={runtime.tools.i586-poky-linux-uclibc-1.6.2+1.0.path}/i586/sysroots/i586-poky-linux-uclibc
 compiler.prefix=i586-poky-linux-uclibc
 compiler.c.cmd={compiler.prefix}-gcc
 compiler.c.flags= -m32 -march=i586 "--sysroot={compiler.sysroot}" -c -g -Os -w -ffunction-sections -fdata-sections -MMD -D__ARDUINO_X86__ -Xassembler -mquark-strip-lock=yes
@@ -59,11 +58,11 @@ recipe.size.regex=Total\s+([0-9]+).*
 
 # X86 Uploader/Programmers tools
 # -------------------
-tools.izmirdl.cmd.path={runtime.tools.sketchUploader-1.0.0.path}/clupload/cluploadGalileo_osx.sh
-tools.izmirdl.cmd.path.linux="{runtime.tools.sketchUploader-1.0.0.path}/clupload/cluploadGalileo_linux.sh"
-tools.izmirdl.cmd.path.windows={runtime.tools.sketchUploader-1.0.0.path}/x86/bin/bash.exe
-tools.izmirdl.cmd.script.windows={runtime.tools.sketchUploader-1.0.0.path}/clupload/cluploadGalileo_win.sh
-tools.izmirdl.cmd.bin.windows={runtime.tools.sketchUploader-1.0.0.path}/x86/bin
+tools.izmirdl.cmd.path={runtime.tools.sketchUploader-1.6.2+1.0.path}/clupload/cluploadGalileo_osx.sh
+tools.izmirdl.cmd.path.linux="{runtime.tools.sketchUploader-1.6.2+1.0.path}/clupload/cluploadGalileo_linux.sh"
+tools.izmirdl.cmd.path.windows={runtime.tools.sketchUploader-1.6.2+1.0.path}/x86/bin/bash.exe
+tools.izmirdl.cmd.script.windows={runtime.tools.sketchUploader-1.6.2+1.0.path}/clupload/cluploadGalileo_win.sh
+tools.izmirdl.cmd.bin.windows={runtime.tools.sketchUploader-1.6.2+1.0.path}/x86/bin
 
 tools.izmirdl.upload.params.verbose=-vvvvvv
 tools.izmirdl.upload.params.quiet=-q
