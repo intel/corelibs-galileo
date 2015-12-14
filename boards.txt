@@ -5,6 +5,10 @@ menu.cpu=Processor
 ##############################################################
 
 izmir_fd.name=Intel® Galileo
+
+izmir_fd.vid.0=0x8086
+izmir_fd.pid.0=0xBABE
+
 izmir_fd.upload.tool=izmirdl
 izmir_fd.upload.protocol=sam-ba
 izmir_fd.upload.maximum_size=10000000
@@ -12,15 +16,22 @@ izmir_fd.upload.use_1200bps_touch=false
 izmir_fd.upload.wait_for_upload_port=false
 izmir_fd.upload.native_usb=false
 
+izmir_fd.build.usb_product="Intel® Galileo"
 izmir_fd.build.mcu=i586
 izmir_fd.build.f_cpu=-m32
 izmir_fd.build.core=arduino
 izmir_fd.build.variant=galileo_fab_d
 #izmir_fd.build.variant_system_lib=libx86_izmir_gcc_rel.a
+izmir_fd.build.vid=0x8086
+izmir_fd.build.pid=0xBABE
 
 ##############################################################
 
 izmir_fg.name=Intel® Galileo Gen2
+
+izmir_fg.vid.0=0x8086
+izmir_fg.pid.0=0xBABE
+
 izmir_fg.upload.tool=izmirdl
 izmir_fg.upload.protocol=sam-ba
 izmir_fg.upload.maximum_size=10000000
@@ -28,8 +39,11 @@ izmir_fg.upload.use_1200bps_touch=false
 izmir_fg.upload.wait_for_upload_port=false
 izmir_fg.upload.native_usb=false
 
+izmir_fg.build.usb_product="Intel® Galileo"
 izmir_fg.build.mcu=i586
 izmir_fg.build.f_cpu=-m32
 izmir_fg.build.core=arduino
 izmir_fg.build.variant=galileo_fab_g
 #izmir_fg.build.variant_system_lib=libx86_izmir_gcc_rel.a
+izmir_fg.build.vid=0x8086
+izmir_fg.build.pid=0xBABE
