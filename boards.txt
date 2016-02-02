@@ -24,6 +24,7 @@ izmir_fd.build.variant=galileo_fab_d
 #izmir_fd.build.variant_system_lib=libx86_izmir_gcc_rel.a
 izmir_fd.build.vid=0x8086
 izmir_fd.build.pid=0xBABE
+izmir_fd.build.board=GALILEO
 
 ##############################################################
 
@@ -47,3 +48,4 @@ izmir_fg.build.variant=galileo_fab_g
 #izmir_fg.build.variant_system_lib=libx86_izmir_gcc_rel.a
 izmir_fg.build.vid=0x8086
 izmir_fg.build.pid=0xBABE
+izmir_fg.build.board=GALILEOGEN2
