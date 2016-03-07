@@ -188,12 +188,12 @@ size_t EthernetClient::write(const uint8_t *buf, size_t size)
 	return size;
 }
 
-int EthernetClient::available()
+int EthernetClient::available(int timeout=0)
 {
 	struct pollfd ufds;
 	int ret = 0;
 	extern int errno;
-	int    timeout = 5000;	// milliseconds
+	// int    timeout = 5000;	// milliseconds
 
 	if (_sock == -1){
 		return 0;
@@ -261,10 +261,10 @@ int EthernetClient::read(uint8_t *buf, size_t size)
 int EthernetClient::peek()
 {
         uint8_t b;
-       
+
         if ( ! available() ) return -1;
         if ( recv(_sock, &b, 1, MSG_PEEK) < 1 ) return -1;
-       
+
         return b;
 
 }
