@@ -51,6 +51,8 @@ class Print
       return write((const uint8_t *)str, strlen(str));
     }
     virtual size_t write(const uint8_t *buffer, size_t size);
+    
+    virtual size_t write(const char *buffer, size_t size);
 
     size_t print(const __FlashStringHelper *);
     size_t print(const String &);

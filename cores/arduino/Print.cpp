@@ -39,6 +39,15 @@ size_t Print::write(const uint8_t *buffer, size_t size)
   return n;
 }
 
+size_t Print::write(const char *buffer, size_t size)
+{
+  size_t n = 0;
+  while (size--) {
+    n += write(*buffer++);
+  }
+  return n;
+}
+
 size_t Print::print(const __FlashStringHelper *ifsh)
 {
   return print(reinterpret_cast<const char *>(ifsh));
