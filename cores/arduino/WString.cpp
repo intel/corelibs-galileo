@@ -29,7 +29,7 @@
 
 #include "WString.h"
 #include <stdio.h>
-
+#include <avr/dtostrf.h>
 
 // following the C++ standard operators with attributes in right
 // side must be defined globally
@@ -165,6 +165,40 @@ String::String(unsigned long value, unsigned char base)
 	//ultoa(value, buf, base);
 	snprintf(buf, sizeof(buf), getCSpec(base, false, true), value);
 	*this = buf;
+}
+
+String::String(float value, unsigned char decimalPlaces)
+{
+	init();
+    int digits = 0;
+    int intValue = (int)value;
+    while(intValue !=0)
+    {
+        intValue /= 10;
+        digits++;
+    }
+    digits += + decimalPlaces;
+    if(value < 0)
+        digits++;
+	char buf[digits];
+	*this = dtostrf(value, digits, decimalPlaces, buf);
+}
+
+String::String(double value, unsigned char decimalPlaces)
+{
+	init();
+    int digits = 0;
+    int intValue = (int)value;
+    while(intValue !=0)
+    {
+        intValue /= 10;
+        digits++;
+    }
+    digits += + decimalPlaces;
+    if(value < 0)
+        digits++;
+	char buf[digits];
+	*this = dtostrf(value, digits, decimalPlaces, buf);
 }
 
 String::~String()
