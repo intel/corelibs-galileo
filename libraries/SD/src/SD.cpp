@@ -79,9 +79,22 @@ size_t File::write(const uint8_t val){
   return fputc(val, _file);
 }
 
+size_t File::write(char c){
+  return fputc(c, _file);
+}
+
+size_t File::write(const char *buf){
+  return fwrite(buf, sizeof(char), strlen(buf), _file);
+}
+
 size_t File::write(const uint8_t *buf, size_t size){
   return fwrite(buf, sizeof(char), size, _file);
 }
+
+size_t File::write(const char *buf, size_t size){
+  return fwrite(buf, sizeof(char), size, _file);
+}
+
 
 int File::read(void){
   return fgetc(_file);

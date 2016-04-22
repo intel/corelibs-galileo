@@ -42,7 +42,10 @@ public:
   File(void);
   ~File(void);
   virtual size_t write(uint8_t);
+  virtual size_t write(char);
+  virtual size_t write(const char *buf);
   virtual size_t write(const uint8_t *buf, size_t size);
+  virtual size_t write(const char *buf, size_t size);
   virtual int read();
   virtual int peek();
   virtual int available();
