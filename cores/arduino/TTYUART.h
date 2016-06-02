@@ -38,6 +38,7 @@ private:
 	char * _tty_name;
 	uint32_t _dwBaudRate;
 	bool _console;
+	bool _active = false;
 
 	// Use threads to support the model of available/peek the Serial class requires
 	pthread_t _thread;

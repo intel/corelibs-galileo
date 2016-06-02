@@ -257,6 +257,9 @@ void TTYUARTClass::begin( const uint32_t dwBaudRate )
 	struct termios newtios, oldtermios;
 	int ret;
 
+	if (_active)
+		return;
+
 	if (_tty_name == NULL) {
 		fprintf(stderr, "tty_name not initialised\n");
 		fflush(stderr);
@@ -418,11 +421,16 @@ void TTYUARTClass::begin( const uint32_t dwBaudRate )
 
 	// sync startup
 	pthread_barrier_wait(&_barrier);
+
+	_active = true;
 }
 
 void TTYUARTClass::end( void )
 {
 	char c;
+
+	if (!_active)
+		return;
 
 	// Write to the fifo_fd_wr to signal termination to 'IRQ' thread
 	_write(_pipe_tx_rx[__TTYUART_IDX_TX], &c, 1);
@@ -452,6 +460,8 @@ void TTYUARTClass::end( void )
 		close(_pipe_tx_rx[__TTYUART_IDX_RX]);
 		_pipe_tx_rx[__TTYUART_IDX_RX] = -1;
 	}
+
+	_active = false;
 }
 
 int TTYUARTClass::available( void )
