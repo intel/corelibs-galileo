@@ -461,6 +461,7 @@ void TTYUARTClass::end( void )
 		_pipe_tx_rx[__TTYUART_IDX_RX] = -1;
 	}
 
+	_rx_buffer->_iHead = _rx_buffer->_iTail = 0;
 	_active = false;
 }
 
