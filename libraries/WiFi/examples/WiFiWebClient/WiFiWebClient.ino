@@ -30,8 +30,9 @@ int keyIndex = 0;            // your network key Index number (needed only for W
 
 int status = WL_IDLE_STATUS;
 // if you don't want to use DNS (and reduce your sketch size)
-// use the numeric IP instead of the name for the server:
-//IPAddress server(74,125,232,128);  // numeric IP for Google (no DNS)
+// use the numeric IP instead of the name for the server (this
+// IP address may change- use "ping www.google.com" to check)
+//IPAddress server(216,58,193,100);  // numeric IP for Google (no DNS)
 char server[] = "www.google.com";    // name address for Google (using DNS)
 
 // Initialize the Ethernet client library

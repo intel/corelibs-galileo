@@ -19,7 +19,9 @@
 // Enter a MAC address for your controller below.
 // Newer Ethernet shields have a MAC address printed on a sticker on the shield
 byte mac[] = {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
-IPAddress server(173,194,33,104); // Google
+
+// This address may change; use "ping www.google.com" to check.
+IPAddress server(172,217,3,238); // Google
 
 // Initialize the Ethernet client library
 // with the IP address and port of the server 
