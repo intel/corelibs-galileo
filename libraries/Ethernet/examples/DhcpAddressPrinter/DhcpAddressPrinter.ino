@@ -35,6 +35,10 @@ void setup() {
     ; // wait for serial port to connect. Needed for Leonardo only
   }
 
+  // Uncomment this line if you are using a Galileo (Gen 1 or Gen2) and you
+  // are not booting from the SD card.
+  //system("ifup eth0");
+
   // start the Ethernet connection:
   if (Ethernet.begin(mac) == 0) {
     Serial.println("Failed to configure Ethernet using DHCP");

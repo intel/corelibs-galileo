@@ -57,6 +57,11 @@ const unsigned long postingInterval = 10L*1000L;  // delay between updates to co
 void setup() {
   // start serial port:
   Serial.begin(9600);
+
+  // Uncomment this line if you are using a Galileo (Gen 1 or Gen2) and you
+  // are not booting from the SD card.
+  //system("ifup eth0");
+
   // start the Ethernet connection:
   if (Ethernet.begin(mac) == 0) {
     Serial.println("Failed to configure Ethernet using DHCP");

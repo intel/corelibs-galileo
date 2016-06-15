@@ -36,6 +36,10 @@ char  ReplyBuffer[] = "acknowledged";       // a string to send back
 EthernetUDP Udp;
 
 void setup() {
+  // Uncomment this line if you are using a Galileo (Gen 1 or Gen2) and you
+  // are not booting from the SD card.
+  //system("ifup eth0");
+
   // start the Ethernet and UDP:
   Ethernet.begin(mac,ip);
   Udp.begin(localPort);

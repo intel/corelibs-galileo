@@ -49,6 +49,11 @@ void setup() {
   Serial.begin(9600);
   // give the ethernet module time to boot up:
   delay(1000);
+
+  // Uncomment this line if you are using a Galileo (Gen 1 or Gen2) and you
+  // are not booting from the SD card.
+  //system("ifup eth0");
+
   // start the Ethernet connection using a fixed IP address and DNS server:
   Ethernet.begin(mac, ip, myDns);
   // print the Ethernet board/shield's IP address:

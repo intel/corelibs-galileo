@@ -37,6 +37,10 @@ IPAddress server(1,1,1,1);
 EthernetClient client;
 
 void setup() {
+  // Uncomment this line if you are using a Galileo (Gen 1 or Gen2) and you
+  // are not booting from the SD card.
+  //system("ifup eth0");
+
   // start the Ethernet connection:
   Ethernet.begin(mac, ip);
   // Open serial communications and wait for port to open:

@@ -60,6 +60,10 @@ void setup() {
   // start the SPI library:
   SPI.begin();
 
+  // Uncomment this line if you are using a Galileo (Gen 1 or Gen2) and you
+  // are not booting from the SD card.
+  //system("ifup eth0");
+
   // start the Ethernet connection and the server:
   Ethernet.begin(mac, ip);
   server.begin();

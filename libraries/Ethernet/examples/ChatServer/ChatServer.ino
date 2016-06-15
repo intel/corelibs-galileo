@@ -35,6 +35,11 @@ EthernetServer server(23);
 boolean alreadyConnected = false; // whether or not the client was connected previously
 
 void setup() {
+
+  // Uncomment this line if you are using a Galileo (Gen 1 or Gen2) and you
+  // are not booting from the SD card.
+  //system("ifup eth0");
+
   // initialize the ethernet device
   Ethernet.begin(mac, ip, gateway, subnet);
   // start listening for clients
