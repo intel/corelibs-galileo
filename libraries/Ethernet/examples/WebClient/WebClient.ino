@@ -21,7 +21,8 @@
 byte mac[] = {  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
 // This address may change; use "ping www.google.com" to check.
-IPAddress server(172,217,3,238); // Google
+// IPAddress server(172,217,3,238); // Google (No DNS)
+char server[] = "www.google.com";  // Google (Using DNS)
 
 // Initialize the Ethernet client library
 // with the IP address and port of the server 
