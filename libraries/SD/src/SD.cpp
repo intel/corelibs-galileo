@@ -273,7 +273,8 @@ boolean SDClass::exists(char *filepath){
   struct stat st;
   return stat(sd_path(filepath).c_str(), &st) == 0;
 }
-
+// This function will return a 0 on success as it invokes Linux commands internally
+// If you do any checking of the bool value please note that success is O or FALSE
 boolean SDClass::mkdir(char *filepath){
   char tmp[256];
   char *p = NULL;
@@ -291,11 +292,13 @@ boolean SDClass::mkdir(char *filepath){
     }
   return ::mkdir(sd_path(tmp).c_str(), S_IRWXU);
 }
-
+// This function will return a 0 on success as it invokes Linux commands internally
+// If you do any checking of the bool value please note that success is O or FALSE
 boolean SDClass::remove(char *filepath){
   return ::remove(sd_path(filepath).c_str());
 }
-
+// This function will return a 0 on success as it invokes Linux commands internally
+// If you do any checking of the bool value please note that success is O or FALSE
 boolean SDClass::rmdir(char *filepath){
   return ::rmdir(sd_path(filepath).c_str());
 }
