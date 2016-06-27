@@ -69,6 +69,7 @@ public:
   boolean begin(uint8_t csPin = 0);
   File open(const char *filepath, uint8_t mode = FILE_READ);
   boolean exists(char *filepath);
+  // the following functions will return 0 on success because they are internally invoking Linux commands
   boolean mkdir(char *filepath);
   boolean remove(char *filepath);
   boolean rmdir(char *filepath);
